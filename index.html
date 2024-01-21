@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hilight Project</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="searchBox">
+        <input type="text" id="input" placeholder="Enter text to Search..">
+        <button id="searchButton">Search</button>
+    </div>
+        
+
+        <div class="content-contaner" id="content">
+            <p id="p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, alias ullam natus atque
+                consequuntur
+                facilis laudantium sunt iusto dolor veniam repellendus earum magni optio corporis veritatis ipsam, ex
+                tempore perspiciatis.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, alias ullam natus atque
+                consequuntur
+                facilis laudantium sunt iusto dolor veniam repellendus earum magni optio corporis veritatis ipsam, ex
+                tempore perspiciatis.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, alias ullam natus atque
+                consequuntur
+                facilis laudantium sunt iusto dolor veniam repellendus earum magni optio corporis veritatis ipsam, ex
+                tempore perspiciatis.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, alias ullam natus atque
+                consequuntur
+                facilis laudantium sunt iusto dolor veniam repellendus earum magni optio corporis veritatis ipsam, ex
+                tempore perspiciatis.</p>
+        
+    </div>
+
+    <script>
+
+var p = document.getElementById("p")
+var srchbtn = document.getElementById("searchButton")
+srchbtn.addEventListener("click", () => {
+    let input = document.getElementById("input").value;
+    if(input !== ""){
+        let regExp = new RegExp(input, 'gi')
+        p.innerHTML = p.textContent.replace(regExp, "<mark>$&</mark>")
+    }
+    else{
+        alert("this is'nt here")
+    }
+})
+    </script>
+
+
+</body>
+
+</html>
